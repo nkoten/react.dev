@@ -8,7 +8,8 @@
 
 4- **Hooks de Referência** (useRef).
 
-5- **Hooks de Efeito** (useEffect) — ele muitas vezes sugere que efeitos fiquem juntos ou sejam movidos para Custom Hooks para não "poluir" a beleza visual do componente.
+5- **Hooks de Efeito** (useEffect)
+— ele muitas vezes sugere que efeitos fiquem juntos ou sejam movidos para Custom Hooks para não "poluir" a beleza visual do componente.
 
 6- **Funções de Manipulação** (Handlers).
 
