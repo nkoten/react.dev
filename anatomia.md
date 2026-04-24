@@ -115,6 +115,8 @@ export function useForm(initialValues = {}) {
 }
 ```
 
+### Teatro Das Sombras
+
 ```JSX
 // smartinput
 import React, { useState, useMemo } from 'react';
@@ -163,5 +165,60 @@ const App = () => {
   };
 
   return <SmartInput logic={currencyLogic} />;
+};
+```
+
+```JSX
+import React, { useState } from 'react';
+
+const ToggleInput = ({ initialValue = "", logic, onSave }) => {
+  const [raw, setRaw] = useState(initialValue);
+  const [isFocused, setIsFocused] = useState(false);
+
+  // O "data" é derivado da lógica apenas quando não estamos editando
+  const data = logic(raw);
+
+  const handleFocus = () => setIsFocused(true);
+
+  const handleBlur = () => {
+    setIsFocused(false);
+    if (onSave) onSave(raw); // Notifica o sistema do valor final
+  };
+
+  const handleChange = (e) => {
+    // Aqui você pode aplicar filtros básicos, como permitir apenas números
+    const value = e.target.value;
+    setRaw(value);
+  };
+
+  return (
+    <div className="smart-input-container">
+      <input
+        type="text"
+        // A mágica acontece aqui: decide o que mostrar baseado no estado de foco
+        value={isFocused ? raw : data}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        className={isFocused ? 'input-editing' : 'input-viewing'}
+      />
+    </div>
+  );
+};
+
+// Exemplo de uso: Formatação de Data
+const App = () => {
+  const dateFormatter = (val) => {
+    if (val.length !== 8) return val; // Retorna o bruto se incompleto
+    // Transforma 24042024 em 24 / 04 / 2024
+    return val.replace(/(\d{2})(\d{2})(\d{4})/, "$1 / $2 / $3");
+  };
+
+  return (
+    <ToggleInput
+      logic={dateFormatter}
+      onSave={(val) => console.log("Salvo no banco:", val)}
+    />
+  );
 };
 ```
