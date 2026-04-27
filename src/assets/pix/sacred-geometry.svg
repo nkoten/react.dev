@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="701" height="701" viewBox="554 120 701 701">
+  
+  <g id="bg" 
+    fill="#191724" 
+    fill-rule="nonzero" 
+    font-family="none" 
+    font-weight="none" 
+    font-size="none"
+  >
+    <rect x="554.5" y="86.07143" transform="scale(1,1.4)" width="700" height="500" id="Shape-1-1"/>
+  </g>
+
+      
+  <g id="sacred-geometry" 
+    fill-opacity="0" 
+    fill="#0000ff" 
+    stroke="#ffffff" 
+    stroke-width="18" 
+    stroke-linecap="square" 
+    stroke-linejoin="miter"
+  >
+    <g tag="outter-square" 
+      stroke="#da5200" 
+      fill="#0000ff" 
+    >
+      <path d="M729.32834,645.67166v-350.34332h350.34332v350.34332z" />
+    </g>
+
+    <g tag="inner-square" 
+      stroke="#ffab00"
+    >
+      <path d="M656.76987,470.5l247.73013,-247.73013l247.73013,247.73013l-247.73013,247.73013z" id="Path-2006-1"/>
+    </g>
+  </g>
+
+  <g id="external-circles">
+
+    <g tag="outside-circle" >
+      <path fill="#ffffff" fill-opacity="0" stroke="#ff7815" stroke-width="15" d="M579,470.5c0,-179.76869 145.73131,-325.5 325.5,-325.5c179.76869,0 325.5,145.73131 325.5,325.5c0,179.76869 -145.73131,325.5 -325.5,325.5c-179.76869,0 -325.5,-145.73131 -325.5,-325.5z" />
+    </g>
+
+    <g tag="inside-circle" >
+      <path fill="#0000ff" fill-opacity="0" stroke="#ffaa99" stroke-width="6" d="M629.5,470.5c0,-151.32602 123.12169,-274 275,-274c151.87831,0 275,122.67398 275,274c0,151.32602 -123.12169,274 -275,274c-151.87831,0 -275,-122.67398 -275,-274z"/>
+    </g>
+
+  </g>
+
+</svg>
